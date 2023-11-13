@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\.9521973aefabde39cf810d5e1865d24dd04098cf-audit.json",
+    "files": [
+        {
+            "date": 1699557785625,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-10-11-01-success.log",
+            "hash": "2d61996754e21d93ebf8bc2c92880d043347db50ae5bf1e4c7442e726aa02a6d"
+        },
+        {
+            "date": 1699560007717,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-10-11-02-success.log",
+            "hash": "16f8ac6e1612ea5abd92c4f004713fa7bafdfc0b204cb405476476d8859e18b6"
+        },
+        {
+            "date": 1699791960959,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-12-11-18-success.log",
+            "hash": "5934d0c052f1a06bd56896772f1e3c005f226498d7bd22893c38227b37c8c9e2"
+        },
+        {
+            "date": 1699798161019,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-12-11-20-success.log",
+            "hash": "2ead59a3ef207725df675433b9883f021da6a4778f5c13fe91ebb7b599b06533"
+        },
+        {
+            "date": 1699801819006,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-12-11-21-success.log",
+            "hash": "bc533af76608cad757954bfc9f8ac757076ee749b34c04b42da6029e9107a6b9"
+        },
+        {
+            "date": 1699807010784,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-12-11-22-success.log",
+            "hash": "98f1e0c95a53ee2e402579e37a10bb41ed054904ca8e7722ba22971253e80c9c"
+        },
+        {
+            "date": 1699853164929,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-13-11-11-success.log",
+            "hash": "3b9ed400f65145ee6c9936c4693a7961ec0f1bbc54d4494c1b8d8f08dfc8e54a"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\.36600e21048f26f7be50295d983d12fe3e42e6b0-audit.json",
+    "files": [
+        {
+            "date": 1699557788514,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-10-11-01-error.log",
+            "hash": "c5816ce2522ce8d4523591f1e595f294d09193b95806e460b0c15299918eced8"
+        },
+        {
+            "date": 1699560007728,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-10-11-02-error.log",
+            "hash": "4382f456c5069ceef6ab055320dd92f1fdb6c74300adf8cbb66eaf688371c125"
+        },
+        {
+            "date": 1699791960988,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-12-11-18-error.log",
+            "hash": "8f64c88e23b204fcfbb5afbe868ca4f859e2a2b76b2dcd1353939b606d30025a"
+        },
+        {
+            "date": 1699798161032,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-12-11-20-error.log",
+            "hash": "d20cce19759e1ab9e0305767c9298db7d19827ab67c8a420c33d7e2200209446"
+        },
+        {
+            "date": 1699801819015,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-12-11-21-error.log",
+            "hash": "9890ad57a76fbbf225755af3f3fac09bad5ac7e65c652144f1cb8a67c6eb9fb9"
+        },
+        {
+            "date": 1699807010799,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-12-11-22-error.log",
+            "hash": "b75874dba6cafac7f8902538dd9498f869a5faa9c845c1c3ed35724bbe2eaf14"
+        },
+        {
+            "date": 1699853164956,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-13-11-11-error.log",
+            "hash": "c74327ae786d463e75fd7c2b7133f949b3fad0d8da3dc3baf4c5a3e48e7bb402"
+        }
+    ],
+    "hashType": "sha256"
+}
