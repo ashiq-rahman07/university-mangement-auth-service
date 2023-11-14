@@ -1,18 +1,10 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import express, {
-  Application,
-  NextFunction,
-  Request,
-  Response,
-  request,
-  response,
-} from 'express';
-import userRouter from './app/modules/user/user.route';
+import express, { Application } from 'express';
+
 import cors from 'cors';
 // import ApiError from './errors/ApiError'
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
-import { AcademicSemesterRoutes } from './app/modules/academicSemester/academicSemester.route';
+
+import router from './app/routes';
 const app: Application = express();
 
 app.use(cors());
@@ -23,12 +15,13 @@ app.use(express.urlencoded({ extended: true }));
 
 //Application routes
 
-app.use('/api/v1/users', userRouter);
-app.use('/api/v1/academic-semesters', AcademicSemesterRoutes);
+app.use('/api/v1/', router);
+
 // //testing
 // app.get('/', (req: Request, res: Response, next: NextFunction) => {
 //   // next('ORE BABA ERROR')
 // })
+
 //Global error handler
 app.use(globalErrorHandler);
 
