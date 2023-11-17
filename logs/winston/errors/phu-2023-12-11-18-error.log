@@ -1,0 +1,20 @@
+{
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5001,
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-11-12T12:34:57.874Z'
+}
+{
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5001,
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-11-12T12:35:41.953Z'
+}
