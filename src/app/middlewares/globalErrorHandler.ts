@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
@@ -9,6 +11,7 @@ import handleValidationError from '../../errors/handleValidationError';
 import handleZodError from '../../errors/handleZodError';
 import ApiError from '../../errors/ApiError';
 import { ZodError } from 'zod';
+import handleCastError from '../../errors/handleCastError';
 
 const globalErrorHandler: ErrorRequestHandler = (
   error,
@@ -34,6 +37,11 @@ const globalErrorHandler: ErrorRequestHandler = (
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessage;
+  } else if (error?.name === 'CastError') {
+    const simplifiedError = handleCastError(error);
+    statusCode = simplifiedError.statusCode;
+    message = simplifiedError.message;
+    errorMessages = simplifiedError.errorMessages;
   } else if (error instanceof ApiError) {
     statusCode = error?.statusCode;
     message = error.message;
@@ -52,6 +60,5 @@ const globalErrorHandler: ErrorRequestHandler = (
     errorMessages,
     stack: config.env !== 'production' ? error?.stack : undefined,
   });
-  next();
 };
 export default globalErrorHandler;
