@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Request, Response, NextFunction, ErrorRequestHandler } from 'express';
 import config from '../../config/index';
 import { IGenericErrorMessage } from '../../interfaces/error';
@@ -19,9 +17,9 @@ const globalErrorHandler: ErrorRequestHandler = (
   res: Response,
   next: NextFunction,
 ) => {
-  config.env === 'development'
-    ? console.log(`globalErrorHandler`, error)
-    : errorLogger.error(`globalErrorHandler`, error);
+  // config.env === 'development'
+  //   ? console.log(`globalErrorHandler`, error)
+  //   : errorLogger.error(`globalErrorHandler`, error);
 
   let statusCode = 500;
   let message = 'something went wrong';
