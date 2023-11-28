@@ -9,4 +9,5 @@ export default {
   database_url: process.env.DATABASE_URL,
   default_student_pass: process.env.DEAFULT_STUDENT_PASS,
   default_faculty_pass: process.env.DEAFULT_FACULTY_PASS,
+  default_admin_pass: process.env.DEAFULT_ADMIN_PASS,
 };
