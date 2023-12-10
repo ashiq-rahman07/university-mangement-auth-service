@@ -24,6 +24,7 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
           required: false,
         },
       },
+
       required: true,
     },
     gender: {
