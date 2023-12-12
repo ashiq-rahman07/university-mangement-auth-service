@@ -6,16 +6,6 @@
     "auditLog": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\.9521973aefabde39cf810d5e1865d24dd04098cf-audit.json",
     "files": [
         {
-            "date": 1701126118604,
-            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-27-11-15-success.log",
-            "hash": "753163dc985973e3b1210ac404e04530cd495d90cb7a4994527096cd956ca5ed"
-        },
-        {
-            "date": 1701129725092,
-            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-27-11-16-success.log",
-            "hash": "8fe261c071b48db3cef0f89a8f3e89e038baca6389fe3d166e70b085c6070143"
-        },
-        {
             "date": 1701921963716,
             "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-07-12-10-success.log",
             "hash": "d6c850ecfb4148de40a4450eaa6036929cb193ff6c5ae788449c4aa5725bf8d1"
@@ -44,6 +34,11 @@
             "date": 1702238769314,
             "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-11-12-02-success.log",
             "hash": "e748b0ae16161e340a8d5c53935a14d01b6f11f34120002dd1492fe911bb6772"
+        },
+        {
+            "date": 1702409945523,
+            "name": "D:\\nextLevelCrse\\university-mangement-auth-service\\logs\\winston\\successes\\phu-2023-13-12-01-success.log",
+            "hash": "6b538ddda0f58e679be50e9ad4db8529e17914b93813fb19772888cd133645b1"
         }
     ],
     "hashType": "sha256"
