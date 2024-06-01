@@ -2,17 +2,21 @@ import { Schema, model } from 'mongoose';
 import {
   AcademicFacultyModel,
   IAcademicFaculty,
-  IAcademicFacultyFilters,
 } from './academicFaculty.interfaces';
 
 const AcademicFacultySchema = new Schema<
   IAcademicFaculty,
-  IAcademicFacultyFilters
+  AcademicFacultyModel
 >(
   {
     title: {
       type: String,
       required: true,
+      unique: true,
+    },
+    syncId: {
+      type: String,
+      required: false,
       unique: true,
     },
   },
