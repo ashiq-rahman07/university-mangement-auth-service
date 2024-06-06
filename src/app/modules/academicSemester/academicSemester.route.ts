@@ -4,6 +4,7 @@ import validateRequest from '../../middlewares/validateRequest';
 import { AcademicSemesterValidation } from './academicSemester.validation';
 
 const router = express.Router();
+router.get('/', AcademicSemesterController.getAllSemesters);
 
 router.post(
   '/create-semester',
@@ -21,6 +22,6 @@ router.patch(
 
 router.delete('/:id', AcademicSemesterController.deleteSemester);
 
-router.get('/', AcademicSemesterController.getAllSemesters);
+// router.get('/', AcademicSemesterController.getAllSemesters);
 
 export const AcademicSemesterRoutes = router;

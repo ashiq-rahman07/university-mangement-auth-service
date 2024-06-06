@@ -29,14 +29,20 @@ const getAllSemesters = async (
   filters: IAcademicSemesterFilters,
   paginationOptions: IPaginationOptions,
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
+  // Extract searchTerm to implement search query
   const { searchTerm, ...filtersData } = filters;
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelpers.calculatePagination(paginationOptions);
 
   const andConditions = [];
-
+  // Search needs $or for searching in specified fields
   if (searchTerm) {
     andConditions.push({
       $or: academicSemesterSearchableFields.map(field => ({
-        [field]: { $regex: searchTerm, $options: 'i' },
+        [field]: {
+          $regex: searchTerm,
+          $options: 'i',
+        },
       })),
     });
   }
@@ -49,43 +55,15 @@ const getAllSemesters = async (
     });
   }
 
-  // const andConditions = [
-  //   {
-  //     $or: [
-  //       {
-  //         title: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //       {
-  //         code: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //       {
-  //         year: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //     ],
-  //   },
-  // ];
-
-  const { page, limit, skip, sortBy, sortOrder } =
-    paginationHelpers.calculatePagination(paginationOptions);
-
+  // Dynamic  Sort needs  field to  do sorting
   const sortConditions: { [key: string]: SortOrder } = {};
-
-  if (sortBy && sortBy) {
+  if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
-  const whereConditons =
+  const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
 
-  const result = await AcademicSemester.find(whereConditons)
+  const result = await AcademicSemester.find(whereConditions)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
@@ -93,7 +71,11 @@ const getAllSemesters = async (
   const total = await AcademicSemester.countDocuments();
 
   return {
-    meta: { page, limit, total },
+    meta: {
+      page,
+      limit,
+      total,
+    },
     data: result,
   };
 };

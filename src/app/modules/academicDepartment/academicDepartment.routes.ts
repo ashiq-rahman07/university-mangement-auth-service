@@ -11,6 +11,7 @@ router.post(
   ),
   AcademicDepartmentController.createDepartment,
 );
+router.get('/', AcademicDepartmentController.getAllDepartments);
 router.get('/:id', AcademicDepartmentController.getSingleDepartment);
 
 router.patch(

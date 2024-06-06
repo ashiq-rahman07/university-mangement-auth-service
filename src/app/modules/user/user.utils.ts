@@ -17,21 +17,14 @@ export const findLastStudentId = async (): Promise<string | undefined> => {
 };
 
 export const generateStudentId = async (
-  academicSemester: IAcademicSemester | null,
+  academicSemester: IAcademicSemester,
 ): Promise<string> => {
-  //this academic semester given chat gpt not course
-  if (!academicSemester) {
-    // handle the case when academicSemester is null
-    throw new Error('Academic semester is null');
-  }
   const currentId =
     (await findLastStudentId()) || (0).toString().padStart(5, '0'); //00000
   //increment by 1
   let incrementedId = (parseInt(currentId) + 1).toString().padStart(5, '0');
   //20 25
-  incrementedId = `${academicSemester.year.substring(2)}${
-    academicSemester.code
-  }${incrementedId}`;
+  incrementedId = `${academicSemester.year}${academicSemester.code}${incrementedId}`;
 
   return incrementedId;
 };

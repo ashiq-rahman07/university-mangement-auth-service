@@ -4,7 +4,7 @@ import { IUser, UserModel } from './user.interface';
 import bcrypt from 'bcrypt';
 import config from '../../../config';
 
-const UserSchema = new Schema<IUser>(
+const UserSchema = new Schema<IUser, UserModel>(
   {
     id: {
       type: String,
@@ -42,6 +42,9 @@ const UserSchema = new Schema<IUser>(
   },
   {
     timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
   },
 );
 
@@ -62,6 +65,12 @@ UserSchema.statics.isPasswordMatched = async function (
   savedPassword: string,
 ): Promise<boolean> {
   return await bcrypt.compare(givenPassword, savedPassword);
+};
+
+UserSchema.methods.changedPasswordAfterJwtIssued = function (
+  jwtTimestamp: number,
+) {
+  console.log({ jwtTimestamp }, 'hi');
 };
 
 // User.create() / user.save()
